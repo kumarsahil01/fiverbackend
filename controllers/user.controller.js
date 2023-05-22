@@ -1,6 +1,6 @@
 import User from "../Models/user.model.js";
-
-export const deleteuser = async (req, res, next) => {
+import createError from "../utils/CreateErrors.js";
+export const deleteuser = async (req, res, next)  => {
   const user = await User.findById(req.params.id);
 
   if (req.userId !== user._id.toString()) {

@@ -11,6 +11,7 @@ import messageroute from './routes/message.route.js'
 import reviewroute from './routes/review.route.js'
 import authroute from './routes/auth.route.js'
 import cookieParser from "cookie-parser";
+import cors from 'cors'
 
 // mongoose.set('strictQuery' ,true)
 const connect =async ()=>{
@@ -22,6 +23,8 @@ const connect =async ()=>{
         console.error(error);
       }
 }
+
+app.use(cors({origin:'http://127.0.0.1:5173',credentials:true,  methods: ['GET', 'POST'],}))
 app.use(express.json())
 app.use(cookieParser())
 
