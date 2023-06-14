@@ -11,9 +11,9 @@ const OrderSchema = new Schema({
     requires:false,
    },
    title:{
-    type:Number,
+    type:String,
     requires:true,
-    enum:[1,2,3,4,5],
+    
    },
    price:{
     type:Number,

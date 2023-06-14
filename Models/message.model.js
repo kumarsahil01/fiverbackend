@@ -3,11 +3,11 @@ const { Schema } = mongoose;
 
 const MessageSchema = new Schema(
   {
-    ConversationId: {
+    conversationId: {
       type: String,
       requires: true,
     },
-    UserId: {
+    userId: {
       type: String,
       requires: true,
     },
